@@ -16,5 +16,5 @@
     <!-- 使用zookeeper注册中心暴露服务地址 -->  
     <dubbo:registry address="zookeeper://127.0.0.1:2181" check="false"></dubbo:registry> 
     <!-- 要引用的服务 -->  
-    <dubbo:reference interface="io.dubbo.demo.provider.service.ProviderService" id="providerService"/>
+    <dubbo:reference interface="io.dubbo.demo.provider.service.ProviderService" id="providerService" cluster="failsafe"/>
 </beans>
